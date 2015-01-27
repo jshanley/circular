@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #eee;
+  margin: 0;
+}
+.dot.black .note {
+  fill: #777;
+  stroke: #333;
+}
+.dot.black .label {
+  fill: #eee;
+}
+.dot.white .note {
+  fill: #fff;
+  stroke: #b7b7b7;
+}
+.label {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+.wrapper {
+  margin-left: 240px;
+  text-align: center;
+  height: 100%;
+}
+.wrapper:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+#viz {
+  display: inline-block;
+  vertical-align: middle;
+}
+.inputs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  padding: 1em;
+  border: none;
+  background-color: #e05a5a;
+  text-transform: uppercase;
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.inputs h1 {
+  margin: 0;
+  text-transform: lowercase;
+  text-align: right;
+}
+.labeled-select {
+  margin-bottom: 1em;
+}
+.labeled-select label {
+  display: block;
+  margin: 0.5em 0 0.25em;
+  width: 100%;
+  text-align: right;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #f7f7f7;
+}
+.labeled-select .select {
+  cursor: pointer;
+  cursor: hand;
+}
+.labeled-select .select .option {
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  text-align: right;
+  padding: 0.125em 0;
+}
+.labeled-select .select .option[data-selected="selected"]:before {
+  content: '✔';
+  color: #f7f7f7;
+  margin-right: 0.5em;
+}

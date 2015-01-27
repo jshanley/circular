@@ -1,0 +1,112 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+
+@sidebarWidth: 240px;
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	margin: 0;
+}
+
+.dot {
+	&.black {
+		.note {
+			fill: #777;
+			stroke: #333;
+		}
+		.label {
+			fill: #eee;
+		}
+	}
+	&.white {
+		.note {
+			fill: #fff;
+			stroke: #b7b7b7;
+		}
+	}
+}
+
+.label {
+	font-size: 24px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+.wrapper {
+	margin-left: @sidebarWidth;
+	text-align: center;
+	height: 100%;
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+}
+
+#viz {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.inputs {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: @sidebarWidth;
+	height: 100%;
+	padding: 1em;
+	border: none;
+	background-color: lighten(firebrick, 20%);
+	text-transform: uppercase;
+	font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	h1 {
+		margin: 0;
+		text-transform: lowercase;
+		text-align: right;
+	}
+}
+
+.labeled-select {
+	margin-bottom: 1em;
+	label {
+		display: block;
+		margin: 0.5em 0 0.25em;
+		width: 100%;
+		text-align: right;
+		font-size: 1.25em;
+		font-weight: bold;
+		//border-bottom: 1px solid #f7f7f7;
+		color: #f7f7f7;
+	}
+	.select {
+		cursor: pointer;
+		cursor: hand;
+		.option {
+			display: block;
+			width: 100%;
+			font-size: 0.8em;
+			text-align: right;
+			padding: 0.125em 0;
+			&[data-selected="selected"] {
+				&:before {
+					content: '✔';
+					color: #f7f7f7;
+					margin-right: 0.5em;
+				}
+			}
+		}
+	}
+}
